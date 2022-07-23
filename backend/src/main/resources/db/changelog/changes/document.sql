@@ -1,3 +1,7 @@
+--liquibase formatted sql
+
+--changeset 07232022-02 author:ehutson
+--preconditions onFail:HALT onError:HALT
 CREATE TABLE IF NOT EXISTS document (
   document_id bigint GENERATED ALWAYS AS IDENTITY,
   user_id BIGINT,
@@ -8,3 +12,4 @@ CREATE TABLE IF NOT EXISTS document (
     FOREIGN KEY(user_id)
     REFERENCES "user"(user_id)
 );
+--rollback DROP TABLE document
