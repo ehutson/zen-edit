@@ -28,8 +28,6 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 }
 
-apply plugin: "org.liquibase.gradle"
-
 configurations {
 	compileOnly.extendsFrom annotationProcessor
 }
